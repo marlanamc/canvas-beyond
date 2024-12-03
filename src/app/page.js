@@ -86,7 +86,7 @@ const Website = () => {
       <nav className="bg-white/90 backdrop-blur-sm shadow-sm fixed w-full z-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-serif text-slate-800 hover:text-slate-600">
+            <Link href="/" className="text-2xl font-serif text-slate-600 hover:text-slate-400">
                 Canvas & Beyond <span className="font-dancing-script">by Heidi</span>
               </Link>
             <div className="flex space-x-8">
