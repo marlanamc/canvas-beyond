@@ -117,10 +117,7 @@ const Website = () => {
               <img
                 src={image}
                 alt={`Banner ${index + 1}`}
-                className="w-full h-full object-cover object-center"
-                style={{
-                  objectPosition: '50% 50%'
-                }}
+                className="w-full h-full object-cover object-center scale-[1.2]" // Added scale
               />
             </div>
           ))}
