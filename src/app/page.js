@@ -116,7 +116,7 @@ const Website = () => {
 
         <div className="relative w-full h-auto">
           <Image
-            src="/path-to-image.jpg"
+            src="/banner/your-image-filename.jpg"
             alt="Banner image"
             width={1920}
             height={1080}
