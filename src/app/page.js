@@ -9,24 +9,24 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 
 const Website = () => {
-  const bannerImages = [
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
     '/banner/image1.jpg',
     '/banner/image2.jpg',
     '/banner/image3.jpg',
     '/banner/image4.jpg'
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
-        prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
-  }, [bannerImages.length]);
+  }, []);
 
   const sliderSettings = {
     dots: false,
@@ -116,8 +116,8 @@ const Website = () => {
 
         <div className="relative w-full h-auto">
           <Image
-            src="/banner/your-image-filename.jpg"
-            alt="Banner image"
+            src={images[currentImageIndex]}
+            alt={`Banner image ${currentImageIndex + 1}`}
             width={1920}
             height={1080}
             className="w-full object-contain"
