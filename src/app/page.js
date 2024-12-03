@@ -91,35 +91,25 @@ const Website = () => {
         </div>
       </nav>
 
-      {/* Banner Section with Slideshow */}
-      <div className="relative h-[500px] overflow-hidden">
-        <div className="absolute inset-0">
-          <Slider {...sliderSettings}>
-            {bannerImages.map((image, index) => (
-              <div key={index} className="h-[500px]">
-                <img
-                  src={image}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </Slider>
+      {/* Banner/Hero Section */}
+      <section className="relative h-[70vh] overflow-hidden">
+        <div className="relative w-full h-full">
+          {bannerImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out ${
+                currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Banner ${index + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          ))}
         </div>
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-stone-50"></div>
-
-        <div className="relative z-10">
-          <div className="text-center pt-20">
-            <h1 className="text-6xl font-bold text-white mb-2">
-              Canvas & Beyond
-            </h1>
-            <p className="font-dancing-script text-3xl text-white/90 italic">
-              by Heidi
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* Services Section */}
       <div className="max-w-6xl mx-auto px-4">
