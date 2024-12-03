@@ -114,7 +114,14 @@ const Website = () => {
                 currentImageIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <Image src={image} alt={`Banner ${index + 1}`} layout="fill" objectFit="cover" />
+              <img
+                src={image}
+                alt={`Banner ${index + 1}`}
+                className="w-full h-full object-cover object-center"
+                style={{
+                  objectPosition: '50% 50%'
+                }}
+              />
             </div>
           ))}
         </div>
