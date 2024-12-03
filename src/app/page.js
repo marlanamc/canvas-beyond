@@ -9,10 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Website = () => {
   const bannerImages = [
-    'https://picsum.photos/seed/art1/1920/1080',
-    'https://picsum.photos/seed/art2/1920/1080',
-    'https://picsum.photos/seed/art3/1920/1080',
-    'https://picsum.photos/seed/art4/1920/1080'
+    '/banner/image1.jpg',
+    '/banner/image2.jpg',
+    '/banner/image3.jpg',
+    '/banner/image4.jpg'
   ];
 
   const sliderSettings = {
