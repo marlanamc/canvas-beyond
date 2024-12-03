@@ -108,26 +108,24 @@ const Website = () => {
       <section className="relative h-[70vh] overflow-hidden">
         {/* Add overlay with title */}
         <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-30">
-          <h1 className="text-4xl md:text-6xl text-white font-serif text-center">
-            Canvas & Beyond <span className="font-dancing-script">by Heidi</span>
+          <h1 className="text-4xl md:text-6xl text-white font-serif text-center flex flex-col">
+            Canvas & Beyond
+            <span className="font-dancing-script text-3xl md:text-4xl mt-2">by Heidi</span>
           </h1>
         </div>
 
-        <div className="relative w-full h-full">
-          {bannerImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out ${
-                currentImageIndex === index ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <img
-                src={image}
-                alt={`Banner ${index + 1}`}
-                className="w-full h-full object-cover object-center scale-[1.2]" // Added scale
-              />
-            </div>
-          ))}
+        <div className="relative w-full h-auto">
+          <Image
+            src="/path-to-image.jpg"
+            alt="Banner image"
+            width={1920}
+            height={1080}
+            className="w-full object-contain"
+            priority
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            {/* ... title content ... */}
+          </div>
         </div>
       </section>
 
