@@ -106,6 +106,13 @@ const Website = () => {
 
       {/* Banner/Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
+        {/* Add overlay with title */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-30">
+          <h1 className="text-4xl md:text-6xl text-white font-serif text-center">
+            Canvas & Beyond <span className="font-dancing-script">by Heidi</span>
+          </h1>
+        </div>
+
         <div className="relative w-full h-full">
           {bannerImages.map((image, index) => (
             <div

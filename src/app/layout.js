@@ -1,25 +1,24 @@
 import './globals.css'
 import { Dancing_Script } from 'next/font/google';
-import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const dancingScript = Dancing_Script({
+
+const dancing = Dancing_Script({
   subsets: ['latin'],
-  variable: '--font-dancing-script',
+  variable: '--font-dancing-script'
 });
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Canvas & Beyond by Heidi',
   description: 'Fine art and illustration services by Heidi',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${dancingScript.variable}`}>
+      <body className={`${inter.className} ${dancing.variable}`}>
         {children}
       </body>
     </html>

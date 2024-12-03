@@ -7,7 +7,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-serif text-slate-800 hover:text-slate-600">
-              Canvas & Beyond by Heidi
+              Canvas & Beyond <span className="font-dancing-script">by Heidi</span>
             </Link>
           </div>
           <div className="flex space-x-8">
