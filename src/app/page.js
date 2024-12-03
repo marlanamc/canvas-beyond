@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from 'next/image';
 
 const Website = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -18,7 +19,7 @@ const Website = () => {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [bannerImages.length]);
 
   const bannerImages = [
     '/banner/image1.jpg',
@@ -113,11 +114,7 @@ const Website = () => {
                 currentImageIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <img
-                src={image}
-                alt={`Banner ${index + 1}`}
-                className="w-full h-full object-cover object-center"
-              />
+              <Image src={image} alt={`Banner ${index + 1}`} layout="fill" objectFit="cover" />
             </div>
           ))}
         </div>
