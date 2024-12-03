@@ -2,8 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['picsum.photos'],
     unoptimized: true
+  },
+  experimental: {
+    appDir: true
   }
 }
 

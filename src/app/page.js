@@ -9,6 +9,13 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 
 const Website = () => {
+  const bannerImages = [
+    '/banner/image1.jpg',
+    '/banner/image2.jpg',
+    '/banner/image3.jpg',
+    '/banner/image4.jpg'
+  ];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -20,13 +27,6 @@ const Website = () => {
 
     return () => clearInterval(timer);
   }, [bannerImages.length]);
-
-  const bannerImages = [
-    '/banner/image1.jpg',
-    '/banner/image2.jpg',
-    '/banner/image3.jpg',
-    '/banner/image4.jpg'
-  ];
 
   const sliderSettings = {
     dots: false,
