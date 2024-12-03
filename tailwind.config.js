@@ -10,6 +10,13 @@ module.exports = {
       fontFamily: {
         'dancing-script': ['var(--font-dancing-script)'],
       },
+      colors: {
+        mandarin: '#F6724B',
+        coral: '#FC8A55',
+        spicymix: '#8F4E51',
+        outerspace: '#2B3349',
+        indigo: '#223C63'
+      }
     },
   },
   plugins: [],
