@@ -7,9 +7,9 @@ const dancingScript = Dancing_Script({
   variable: '--font-dancing-script',
 });
 
-export const metadata: Metadata = {
-  title: 'Canvas & Beyond',
-  description: 'Art Portfolio by Heidi',
+export const metadata = {
+  title: 'Canvas & Beyond by Heidi',
+  description: 'Fine art and illustration services by Heidi',
 };
 
 export default function RootLayout({

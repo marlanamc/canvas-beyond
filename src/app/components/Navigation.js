@@ -2,12 +2,14 @@ import Link from 'next/link';
 
 export default function Navigation() {
   return (
-    <nav className="bg-white/90 backdrop-blur-sm shadow-sm fixed w-full z-50">
-      <div className="max-w-6xl mx-auto px-4">
+    <header className="bg-white shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-purple-800 hover:text-purple-600 font-semibold">
-            Canvas & Beyond
-          </Link>
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-serif text-slate-800 hover:text-slate-600">
+              Canvas & Beyond by Heidi
+            </Link>
+          </div>
           <div className="flex space-x-8">
             <Link href="/" className="text-slate-600 hover:text-purple-800 transition-colors">
               Home
@@ -20,7 +22,7 @@ export default function Navigation() {
             </Link>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 } 
