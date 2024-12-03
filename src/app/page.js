@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Palette, Home, ShoppingBag, Brush, PenTool, Heart } from 'lucide-react';
 import Link from 'next/link';
 import Slider from 'react-slick';
@@ -8,6 +8,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Website = () => {
+  const [currentImageIndex, useState(0)];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const bannerImages = [
     '/banner/image1.jpg',
     '/banner/image2.jpg',
